@@ -1,10 +1,13 @@
 import streamlit as st
 import time
 import google.generativeai as genai
-
+import os
+from dotenv import load_dotenv
 # Replace with your actual API key
 
-genai.configure(api_key="api-key")
+load_dotenv()
+
+genai.configure(api_key=os.environ["api_key"])
 model = genai.GenerativeModel(model_name="gemini-2.0-flash-exp")
 
 st.title("AI Chatbot")
