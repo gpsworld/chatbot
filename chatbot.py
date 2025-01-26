@@ -50,3 +50,34 @@ if prompt := st.chat_input("What is up?"):
 
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": full_response})
+
+
+# Footer styling
+footer = """
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: transparent;
+            color: #716767;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            border-top: 1px solid #ccc;
+            z-index: 1;
+        }
+        .footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <div class="footer">
+        Created with ❤️ by <a href="https://github.com/gpsworld" target="_blank">gpsworld</a>
+    </div>
+"""
+st.markdown(footer, unsafe_allow_html=True)
