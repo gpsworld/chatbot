@@ -66,7 +66,7 @@ footer = """
             padding: 10px 0;
             font-size: 14px;
             border-top: 1px solid #ccc;
-            z-index: 1;
+            z-index: -1;
         }
         .footer a {
             color: #0066cc;
