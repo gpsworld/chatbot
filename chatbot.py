@@ -39,7 +39,7 @@ if prompt := st.chat_input("What is up?"):
         # Simulate progress updates
         for percent_complete in range(0, 101, 10):
             progress_bar.progress(percent_complete / 100.0)
-            time.sleep(3)  # Simulating delay (replace or adjust as needed)
+            time.sleep(0.3)  # Simulating delay (replace or adjust as needed)
 
         # Generate model response
         response = model.generate_content(prompt)
