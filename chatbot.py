@@ -10,7 +10,7 @@ load_dotenv()
 genai.configure(api_key=os.environ["api_key"])
 model = genai.GenerativeModel(model_name="gemini-2.0-flash-exp")
 
-st.title("Hi there...")
+st.title("AI Chatbot")
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -32,10 +32,10 @@ if prompt := st.chat_input("What is up?"):
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
-        
+
         # Initialize progress bar
         progress_bar = st.progress(0)
-        
+
         # Simulate progress updates
         for percent_complete in range(0, 101, 10):
             progress_bar.progress(percent_complete / 100.0)
@@ -43,7 +43,7 @@ if prompt := st.chat_input("What is up?"):
 
         # Generate model response
         response = model.generate_content(prompt)
-        
+
         # Update the chat with the generated response
         full_response = response.text
         message_placeholder.markdown(full_response)
@@ -66,7 +66,7 @@ footer = """
             padding: 10px 0;
             font-size: 14px;
             border-top: 1px solid #ccc;
-            z-index: -1;
+            z-index: 1;
         }
         .footer a {
             color: #0066cc;
