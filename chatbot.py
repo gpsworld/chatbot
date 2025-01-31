@@ -10,7 +10,8 @@ load_dotenv()
 genai.configure(api_key=os.environ["api_key"])
 model = genai.GenerativeModel(model_name="gemini-2.0-flash-exp")
 
-st.title("AI Chatbot")
+st.title("Hi there...")
+st.write("Welcome to GPS!!")
 
 # Initialize chat history
 if "messages" not in st.session_state:
